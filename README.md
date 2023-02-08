@@ -4,7 +4,7 @@
 - This assignment expects to help you practice basic file operations and understand details of file
 formats, as well as practicing C programming language.
 
-"
+>
 <records>
         <row id=”1”>
                     <name>James</name>
@@ -21,4 +21,4 @@ formats, as well as practicing C programming language.
 ...
 </records>
 
-"
+>
