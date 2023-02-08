@@ -3,8 +3,9 @@
 - All coding must be in C programming language.
 - This assignment expects to help you practice basic file operations and understand details of file
 formats, as well as practicing C programming language.
+- Your program will produce an XML file(not include all attributes) that looks like.
 >  
-    <records>
+      <records>
                 <row id=”1”>
                             <name>James</name>
                             <surname>Butt</surname>
