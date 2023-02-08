@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-16" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of simple elements -->
+
+<xs:element name="name" type="xs:string"/>
+<xs:element name="surname" type="xs:string"/>
+<xs:element name="gender" type="xs:string"/>
+<xs:element name="email" type="xs:string"/>
+<xs:element name="phone_number" type="xs:string"/>
+<xs:element name="address" type="xs:string"/>
+<xs:element name="level_of_education" type="xs:string"/>
+<xs:element name="currency_unit" type="xs:string"/>
+<xs:element name="currentMood" type="xs:string"/>
+<xs:element name="height" type="xs:float"/>
+<xs:element name="weight" type="xs:unsignedInt"/>
+
+
+<!-- definition of attributes -->
+
+<xs:attribute name="id" type="xs:positiveInteger"/>
+<xs:attribute name="bigEnd" type="xs:unsignedInt"/>
+
+
+<!-- definition of complex elements -->
+
+<xs:element name="income_level">
+  <xs:complexType>
+    <xs:attribute name="bigEnd" type="xs:unsignedInt"/>
+  </xs:complexType>
+</xs:element>
+ 
+<xs:element name="expenditure">
+  <xs:complexType>
+     <xs:attribute name="bigEnd" type="xs:unsignedInt"/>
+   </xs:complexType>
+</xs:element>
+
+<xs:element name="row">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="name"/>
+      <xs:element ref="surname"/>
+      <xs:element ref="gender"/>
+      <xs:element ref="email"/>
+      <xs:element ref="phone_number"/>
+      <xs:element ref="address"/>
+      <xs:element ref="level_of_education"/>
+      <xs:element ref="currency_unit"/>
+      <xs:element ref="currentMood"/>
+      <xs:element ref="height"/>
+      <xs:element ref="weight"/>
+    </xs:sequence>     
+    <xs:attribute ref="id" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+
+<xs:element name="records">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="row" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>
